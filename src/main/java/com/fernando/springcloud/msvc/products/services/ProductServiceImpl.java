@@ -1,6 +1,6 @@
 package com.fernando.springcloud.msvc.products.services;
 
-import com.fernando.springcloud.msvc.products.entities.Product;
+import com.fernando.libs.msvc.commons.entities.Product;
 import com.fernando.springcloud.msvc.products.repositories.ProductRespository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,4 +38,19 @@ public class ProductServiceImpl implements ProductService{
             return product;
         });
     }
+
+    @Override
+    @Transactional
+    public Product save(Product product) {
+        return this.repository.save(product);
+    }
+
+    @Override
+    @Transactional
+    public void deleteById(Long id) {
+        repository.deleteById(id);
+    }
+
+
+    
 }

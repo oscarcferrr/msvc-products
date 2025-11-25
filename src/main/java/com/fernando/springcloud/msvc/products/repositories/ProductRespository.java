@@ -1,6 +1,6 @@
 package com.fernando.springcloud.msvc.products.repositories;
 
-import com.fernando.springcloud.msvc.products.entities.Product;
+import com.fernando.libs.msvc.commons.entities.Product;
 import org.springframework.data.repository.CrudRepository;
 //import org.springframework.stereotype.Repository;
 
